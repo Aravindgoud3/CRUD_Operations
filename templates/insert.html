@@ -1,0 +1,57 @@
+{%extends 'index.html'%}
+
+
+{%block container%}
+<center><br><br><br>
+
+<form action="{{url_for('insert')}}" method="post">
+
+  <div class="input-group mb-3" style="width:40%">
+  <span class="input-group-text" style='width:25%'>Student Name</span>
+  <div class="form-floating">
+  <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username" name='fname'>
+  <label for="floatingInputGroup1">First name</label>
+
+  <div class="form-floating">
+  <input type="text" class="form-control" id="floatingInputGroup2" placeholder="Username" name='lname'>
+  <label for="floatingInputGroup2">Last name</label>
+
+  </div>
+  </div>
+  </div>
+
+  <div class="input-group mb-3" style="width:40%">
+  <span class="input-group-text" style='width:25%'>Email</span>
+  <div class="form-floating">
+  <input type="email" class="form-control" id="floatingInputGrid1" placeholder="name@example.com" name='email'>
+  <label for="floatingInputGrid1">Email address</label>
+  </div>
+  </div>
+
+  <div class="input-group mb-3" style="width:40%">
+  <span class="input-group-text" style='width:25%'>Contact</span>
+  <div class="form-floating">
+  <input type="number" class="form-control" id="floatingInputGrid2" placeholder="number" name='number'>
+  <label for="floatingInputGrid2"></label>
+  </div>
+  </div>
+
+  <div class="input-group mb-3" style="width:40%">
+  <span class="input-group-text" style='width:25%'>Address</span>
+  <div class="form-floating">
+  <input type="text" class="form-control" id="floatingInputGrid3" placeholder="Address" name='address'>
+  <label for="floatingInputGrid3"></label>
+  </div>
+  </div>
+
+  <div class="input-group mb-3" style="width:40%">
+  <span class="input-group-text" style='width:25%'>Gender</span>
+  <input type="radio" name="gender" value="Male"  style='width:15%'><h5>Male</h5>
+  <input type="radio" name="gender" value="Female" style='width:15%'><h5>Female</h5>
+  </div>
+  <input type="submit" value="Save">
+
+
+</form>
+</center>
+{%endblock%}

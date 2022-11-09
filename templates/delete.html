@@ -1,0 +1,12 @@
+{% extends 'index.html'%}
+
+
+{%block container%}<br><br><br><br><br><br><br><br>
+<div class="container">
+<form action="" method="post">
+  <b>Click YES to confirm</b>
+  <input type="submit" value="YES" class='btn btn-danger'>
+  <a href="{{url_for('display')}}">Cancel</a>
+</form>
+</div>
+{%endblock%}

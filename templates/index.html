@@ -1,0 +1,32 @@
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+<center>
+<body>
+  <style>
+    body{
+      background-image: url({{url_for('static',filename="aa.jpg")}});
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+  </style>
+  <!-- As a heading -->
+  <nav class="navbar bg-light">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1"><h1>CRUD</h1></span>
+      <a class="nav-link" href="{{url_for('index')}}">Home</a>
+        <a class="nav-link" href="{{url_for('insert')}}">Add Student</a>
+        <a class="nav-link" href="{{url_for('display')}}">List Students</a>
+        <a class="nav-link" href="#"></a> <!-- for spacing -->
+    </div>
+  </nav>
+{%block container%}
+
+{%endblock%}
+
+</body>
+
+
+</center>

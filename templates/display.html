@@ -1,0 +1,32 @@
+{% extends 'index.html'%}
+
+{%block container%}<br><br><br>
+
+<table class="table table-success table-hover" style="width:65%">
+  <tr>
+    <th class="table-light">ID</th>
+    <th class="table-light">First Name</th>
+    <th class="table-light">Last Name</th>
+    <th class="table-light">Email</th>
+    <th class="table-light">Phone</th>
+    <th class="table-light">Address</th>
+    <th class="table-light">Gender</th>
+    <th class="table-light"></th>
+    <th class="table-light">Action</th>
+  </tr>
+  <tr>
+    {% for i in details%}
+    <td>{{i.id}}</td>
+    <td>{{i.fname}}</td>
+    <td>{{i.lname}}</td>
+    <td>{{i.email}}</td>
+    <td>{{i.number}}</td>
+    <td>{{i.address}}</td>
+    <td>{{i.gender}}</td>
+    <td><a href="/{{i.id}}/update"><button type="button" class="btn btn-warning">Update</button></a></td>
+    <td><a href="/{{i.id}}/delete"><button type="button" class="btn btn-danger">Delete</button></a></td>
+
+  </tr>
+  {%endfor%}
+</table>
+{%endblock%}
